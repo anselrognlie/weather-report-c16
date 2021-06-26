@@ -132,7 +132,6 @@ select, input {
 article {
     grid-row-start: 1;
     grid-row-end: 4;
-    margin: 2em 4em;
     text-align: center;
 }
 
@@ -141,13 +140,16 @@ article > h3 {
 }
 
 #elGarden {
+    margin: 0 auto;
     border-radius: 5px;
-    height: 20em;
+    min-height: 7em;
+    max-width: 14em;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     color: black;
+    font-size: 3em;
 }
 
 #elGarden > div {
-    padding: 1em 0;
+    padding: .2em 0;
 }
