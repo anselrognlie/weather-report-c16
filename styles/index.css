@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: content-box;
+    background: none;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: teal;
+}
+
+.Sunny {
+    background-color: paleturquoise;
+}
+
+.Cloudy {
+    background-color: skyblue;
+}
+
+.Rainy {
+    background-color: steelblue;
+}
+
+.Snowy {
+    background-color: slategray;
+}
+
+body {
+    background-color: #1c69f9;
+    color: white;
+    font-family: 'Nunito';
+}
+
+header {
+    height: 6em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+header > h1 {
+    margin: 0 .5em;
+}
+
+header > h2 {
+    font-size: .9em;
+    font-style: italic;
+}
+
+.cityName {
+    font-size: 1.5em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 20em 1fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-auto-flow: column;
+}
+
+section {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1.5em;
+    margin: 0 1.5em 1em 1.5em;
+}
+
+section > h3 {
+    color: black;
+    margin-bottom: 1.5em;
+}
+
+section.temp > div {
+    display: grid;
+    grid-template-columns: 2em auto;
+    grid-template-rows: repeat(2, min-content);
+    grid-auto-flow: column;
+}
+
+section.temp button:active {
+    filter: invert(0.30);
+}
+
+section.temp p {
+    font-size: 3em;
+    margin-left: 1rem;
+    line-height: 1em;
+}
+
+section.city button {
+    background-color: #1855cc;
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+section.city button:active {
+    background-color: #1c69f9;
+}
+
+#elTemp {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+select, input {
+    border: solid 1px black;
+    border-radius: 3px;
+    padding: .1em;
+}
+
+article {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin: 2em 4em;
+    text-align: center;
+}
+
+article > h3 {
+    margin: 1em auto;
+}
+
+#elGarden {
+    border-radius: 5px;
+    height: 20em;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    color: black;
+}
+
+#elGarden > div {
+    padding: 1em 0;
+}

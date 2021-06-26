@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="styles/index.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Weather Report</h1>
+        <h2>For the lovely city of <span class="cityName">✨<span id="elCity"></span>✨</span></h2>
+    </header>
+    <main>
+        <section class="temp">
+            <h3>Temperature</h3>
+            <div>
+                <button id="btnTempUp">🔼</button>
+                <button id="btnTempDown">🔽</button>
+                <p id="elTemp">64</p>
+            </div>
+        </section>
+        <section>
+            <h3>Sky</h3>
+            <select id="selSky"></select>
+        </section>
+        <section class="city">
+            <h3>City Name</h3>
+            <input id="txtCity">
+            <button id="btnReset">Reset</button>
+        </section>
+        <article>
+            <h3>Weather Garden</h3>
+            <div id="elGarden">
+                <div id="elSky">🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧</div>
+                <div></div>
+                <div id="elGround">🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂</div>
+            </div>
+        </article>
+    </main>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
