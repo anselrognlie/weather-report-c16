@@ -154,7 +154,8 @@ article > h3 {
     min-height: 7em;
     max-width: 14em;
     display: grid;
-    grid-template-rows: min-content 1fr min-content;
+    grid-template-rows: min-content min-content;
+    align-content: space-between;
     color: black;
     font-size: 3em;
 }
