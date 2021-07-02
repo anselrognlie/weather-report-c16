@@ -44,6 +44,10 @@
     background-color: slategray;
 }
 
+.End-of-Days {
+    background-color: red;
+}
+
 body {
     background-color: #1c69f9;
     color: white;
