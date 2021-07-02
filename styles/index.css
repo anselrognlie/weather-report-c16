@@ -70,8 +70,13 @@ header > h2 {
     font-style: italic;
 }
 
-.cityName {
+#elCity {
     font-size: 1.5em;
+}
+
+#elCity::before, #elCity::after {
+    content: "✨";
+    font-size: 1em;
 }
 
 main {
