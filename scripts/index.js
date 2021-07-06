@@ -18,11 +18,11 @@
         ];
 
         const tempChoices = [
-            ['red', '🚗💨 🚙💨 🔥🏘🔥🏠🔥🔥🏢🔥🦖'],
-            ['orange', '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷'],
-            ['yellow', '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃'],
-            ['green', '🍁🍁🍂_🍁🌲🌽🎃🎃🍂🍁_🍁'],
-            ['teal', '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲'],
+            { lower: null, color: 'teal', ground: '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲'},
+            { lower: 50, color: 'green', ground: '🍁🍁🍂_🍁🌲🌽🎃🎃🍂🍁_🍁'},
+            { lower: 60, color: 'yellow', ground: '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃'},
+            { lower: 70, color: 'orange', ground: '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷'},
+            { lower: 80, color: 'red', ground: '🔥🏘🔥🏠🔥🔥🏢🔥🦖'},
         ];
 
         const defaultCity = 'Seattle';
@@ -55,24 +55,27 @@
         };
 
         const getTempRecord = (temp) => {
-            let record = tempChoices[4];
+            let record = tempChoices[0];
 
-            if (temp >= 80) { record = tempChoices[0]; }
-            else if (temp >= 70) { record = tempChoices[1]; }
-            else if (temp >= 60) { record = tempChoices[2]; }
-            else if (temp >= 50) { record = tempChoices[3]; }
+            for (let i = 1; i < tempChoices.length; ++i) {
+                const choice = tempChoices[i];
+
+                if (temp < choice.lower) { break; }
+
+                record = choice;
+            }
 
             return record;
         };
 
         const getGardenColor = (temp) => {
             const record = getTempRecord(temp);
-            return record[0];
+            return record.color;
         };
 
         const getGardenGround = (temp) => {
             const record = getTempRecord(temp);
-            return record[1];
+            return record.ground;
         };
 
         const updateGround = () => {
